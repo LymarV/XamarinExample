@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:ViewBase
+	xmlns ="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:XamarinExample.Views"
+	x:Class="XamarinExample.Views.WelcomePage"
+	Title="Dashboard">
+
+	<StackLayout>
+		<StackLayout VerticalOptions="FillAndExpand">
+			<Button Text="Logout"
+				Command="{Binding LogoutCommand}"
+				Margin="10"
+				VerticalOptions="Start"
+				HorizontalOptions="End"/>
+			
+			<Label Text="Welcome back!" 
+				FontSize="Large"
+				Margin="25"
+				HorizontalTextAlignment="Center"/>
+			
+			<Label Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+				HorizontalTextAlignment="Center"
+				Margin="25, 0"/>
+			
+		</StackLayout>
+		
+		<StackLayout VerticalOptions="EndAndExpand">
+			<Button Text="Begin a recording"
+				Command="{Binding BeginRecordingCommand}"/>
+
+			<Button Text="View my history"
+				Command="{Binding ViewHistoryCommand}"/>
+		</StackLayout>
+	</StackLayout>
+</local:ViewBase>
